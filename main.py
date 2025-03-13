@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 from dotenv import load_dotenv
 import os
+import uvicorn
 
 # Load environment variables
 load_dotenv()
@@ -43,7 +44,7 @@ def test_token():
 
 @app.get("/")
 def home():
-    return "Welcome"
+    return {"Welcome"}
 
 @app.get("/search")
 async def search_song(q: str):
@@ -75,3 +76,9 @@ async def search_song(q: str):
 
 
     return {"songs": song_data}
+
+
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
