@@ -41,6 +41,10 @@ def test_token():
     access_token = get_spotify_access_token()
     return {"access_token": access_token}
 
+@app.get("/")
+def home():
+    return "Welcome"
+
 @app.get("/search")
 async def search_song(q: str):
     access_token = get_spotify_access_token()
