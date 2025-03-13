@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Recommendation System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background animation -->
+  <div class="bg-animation">
+    <span style="top: 80%; left: 10%; animation-delay: 0s;"></span>
+    <span style="top: 20%; left: 20%; animation-delay: 2s;"></span>
+    <span style="top: 40%; left: 80%; animation-delay: 4s;"></span>
+    <span style="top: 60%; left: 40%; animation-delay: 6s;"></span>
+    <span style="top: 90%; left: 60%; animation-delay: 8s;"></span>
+    <span style="top: 10%; left: 90%; animation-delay: 10s;"></span>
+    <span style="top: 30%; left: 70%; animation-delay: 12s;"></span>
+    <span style="top: 70%; left: 30%; animation-delay: 14s;"></span>
+  </div>
+
+  <div class="container">
+    <!-- Heading -->
+    <h1 class="heading">SONIC PULSE</h1>
+    <p class="subheading">AI Music Recommendation System</p>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Type an artist, song, or genre..." class="search-input" />
+      <button onclick="handleSearch()" class="search-button">Discover</button>
+    </div>
+
+    <!-- Results Grid -->
+    <div id="resultsGrid" class="results-grid"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
