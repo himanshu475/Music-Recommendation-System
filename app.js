@@ -13,7 +13,7 @@ async function handleSearch() {
     }
 
     try {
-        const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
+        const backendUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL}`;
 
         // Fetch songs from the backend using the environment variable
         const response = await fetch(`${backendUrl}/search?q=${query}`);
