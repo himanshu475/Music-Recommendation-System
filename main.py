@@ -20,7 +20,10 @@ SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 # Allow CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://music-recommendation-system-black.vercel.app/"],  # You can restrict this to specific origins, e.g., ["http://127.0.0.1:5500"]
+    allow_origins=[
+        "http://127.0.0.1:5500",   # For local testing
+        "https://your-vercel-domain.vercel.app",  # Replace with your Vercel URL
+    ],# You can restrict this to specific origins, e.g., ["http://127.0.0.1:5500"]
     allow_credentials=True,
     allow_methods=["*"],  # Or specify allowed methods, e.g., ["GET", "POST"]
     allow_headers=["*"],  # Or specify allowed headers
