@@ -13,7 +13,8 @@ async function handleSearch() {
     }
 
     try {
-        const response = await fetch(`http://localhost:8000/search?q=${query}`);
+        const response = await fetch(`https://web-production-6fde.up.railway.app/search?q=${query}`);
+
         const data = await response.json();
 
 
