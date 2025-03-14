@@ -13,7 +13,7 @@ async function handleSearch() {
     }
 
     try {
-        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;  
+        const backendUrl =  window.env.NEXT_PUBLIC_BACKEND_URL;  
         const response = await fetch(`${backendUrl}/search?q=${query}`);
         const data = await response.json();
 
