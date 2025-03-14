@@ -13,9 +13,10 @@ async function handleSearch() {
     }
 
     try {
-        const response = await fetch(`https://web-production-6fde.up.railway.app/search?q=${query}`);
+        const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
 
-        const data = await response.json();
+        // Fetch songs from the backend using the environment variable
+        const response = await fetch(`${backendUrl}/search?q=${query}`);
 
 
         console.log(data);  
