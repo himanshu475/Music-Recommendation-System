@@ -13,6 +13,10 @@ app = FastAPI()
 SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 # Allow CORS
 app.add_middleware(
     CORSMiddleware,
@@ -42,9 +46,7 @@ def test_token():
     access_token = get_spotify_access_token()
     return {"access_token": access_token}
 
-@app.get("/")
-def home():
-    return {"Welcome"}
+
 
 @app.get("/search")
 async def search_song(q: str):
