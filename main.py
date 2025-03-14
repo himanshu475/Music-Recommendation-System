@@ -10,12 +10,14 @@ load_dotenv()
 
 app = FastAPI()
 
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
-
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+
+
 
 # Allow CORS
 app.add_middleware(
