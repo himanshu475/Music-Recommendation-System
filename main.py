@@ -22,11 +22,12 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://127.0.0.1:5500",   # For local testing
-        "https://music-recommendation-system-black.vercel.app/",  # Replace with your Vercel URL
-    ],# You can restrict this to specific origins, e.g., ["http://127.0.0.1:5500"]
+        "https://music-recommendation-system-black.vercel.app/",  
+        "https://web-production-6fde.up.railway.app"
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  # Or specify allowed methods, e.g., ["GET", "POST"]
-    allow_headers=["*"],  # Or specify allowed headers
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 
 @app.get("/")
