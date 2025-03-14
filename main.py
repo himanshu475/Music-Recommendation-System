@@ -10,9 +10,7 @@ load_dotenv()
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+
 
 SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
@@ -27,6 +25,10 @@ app.add_middleware(
     allow_methods=["*"],  # Or specify allowed methods, e.g., ["GET", "POST"]
     allow_headers=["*"],  # Or specify allowed headers
 )
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 # Function to get Spotify API access token
 def get_spotify_access_token():
