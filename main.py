@@ -22,7 +22,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://127.0.0.1:5500",   # For local testing
-        "https://music-recommendation-system-zeta.vercel.app/",  
+        "https://music-recommendation-system-zeta.vercel.app",  
         "https://web-production-6fde.up.railway.app",
     ],
     allow_credentials=True,
