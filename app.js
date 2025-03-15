@@ -13,7 +13,8 @@ async function handleSearch() {
     }
 
     try {
-        const backendUrl =  "https://web-production-6fde.up.railway.app";  
+        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "https://web-production-6fde.up.railway.app";
+ 
         const response = await fetch(`${backendUrl}/search?q=${query}`);
         const data = await response.json();
 
