@@ -24,6 +24,8 @@ app.add_middleware(
         "http://127.0.0.1:5500",   # For local testing
         "https://music-recommendation-system-zeta.vercel.app",  
         "https://web-production-6fde.up.railway.app",
+        "https://music-recommendati-git-504dc0-himanshusali57-gmailcoms-projects.vercel.app",
+        
     ],
     allow_credentials=True,
     allow_methods=["*"],  
